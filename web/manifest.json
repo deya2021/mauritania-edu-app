@@ -1,0 +1,23 @@
+{
+  "name": "mauritania_edu_app",
+  "short_name": "Mauritania Edu",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#2196F3",
+  "theme_color": "#2196F3",
+  "description": "Educational app for students in Mauritania",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/Icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/Icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

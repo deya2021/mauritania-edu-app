@@ -1,0 +1,229 @@
+{
+  "years": [
+    {
+      "id": "year_1",
+      "name": {
+        "ar": "السنة الأولى",
+        "fr": "Première année"
+      },
+      "order": 1,
+      "isActive": true
+    },
+    {
+      "id": "year_2",
+      "name": {
+        "ar": "السنة الثانية",
+        "fr": "Deuxième année"
+      },
+      "order": 2,
+      "isActive": true
+    }
+  ],
+  "subjects": [
+    {
+      "id": "math_year1",
+      "yearId": "year_1",
+      "name": {
+        "ar": "الرياضيات",
+        "fr": "Mathématiques"
+      },
+      "iconUrl": "https://example.com/icons/math.png",
+      "color": "#2196F3",
+      "order": 1
+    },
+    {
+      "id": "arabic_year1",
+      "yearId": "year_1",
+      "name": {
+        "ar": "اللغة العربية",
+        "fr": "Langue Arabe"
+      },
+      "iconUrl": "https://example.com/icons/arabic.png",
+      "color": "#4CAF50",
+      "order": 2
+    }
+  ],
+  "units": [
+    {
+      "id": "math_unit1",
+      "subjectId": "math_year1",
+      "name": {
+        "ar": "الأعداد",
+        "fr": "Les nombres"
+      },
+      "order": 1
+    },
+    {
+      "id": "arabic_unit1",
+      "subjectId": "arabic_year1",
+      "name": {
+        "ar": "الحروف الهجائية",
+        "fr": "L'alphabet"
+      },
+      "order": 1
+    }
+  ],
+  "lessons": [
+    {
+      "id": "math_lesson1",
+      "unitId": "math_unit1",
+      "subjectId": "math_year1",
+      "title": {
+        "ar": "الأعداد من 1 إلى 10",
+        "fr": "Les nombres de 1 à 10"
+      },
+      "summary": {
+        "ar": "في هذا الدرس سنتعلم الأعداد من 1 إلى 10 وكيفية كتابتها والعد باستخدامها.",
+        "fr": "Dans cette leçon, nous apprendrons les nombres de 1 à 10 et comment les écrire et compter avec eux."
+      },
+      "contentLanguage": "fr",
+      "order": 1
+    },
+    {
+      "id": "math_lesson2",
+      "unitId": "math_unit1",
+      "subjectId": "math_year1",
+      "title": {
+        "ar": "الجمع البسيط",
+        "fr": "Addition simple"
+      },
+      "summary": {
+        "ar": "سنتعلم كيفية جمع الأعداد الصغيرة معاً.",
+        "fr": "Nous apprendrons comment additionner de petits nombres ensemble."
+      },
+      "contentLanguage": "fr",
+      "order": 2
+    },
+    {
+      "id": "arabic_lesson1",
+      "unitId": "arabic_unit1",
+      "subjectId": "arabic_year1",
+      "title": {
+        "ar": "الحروف من أ إلى ج",
+        "fr": "Les lettres de Alif à Jim"
+      },
+      "summary": {
+        "ar": "سنتعلم الحروف الثلاثة الأولى من الأبجدية العربية: أ، ب، ج",
+        "fr": "Nous apprendrons les trois premières lettres de l'alphabet arabe: Alif, Ba, Jim"
+      },
+      "contentLanguage": "ar",
+      "order": 1
+    }
+  ],
+  "lesson_contents": [
+    {
+      "id": "content_math_lesson1",
+      "lessonId": "math_lesson1",
+      "sections": [
+        {
+          "title": "Introduction aux nombres",
+          "content": "# Les nombres de 1 à 10\n\nLes nombres sont partout autour de nous. Apprenons les premiers nombres de 1 à 10.\n\n## Les nombres\n\n- 1 : Un\n- 2 : Deux\n- 3 : Trois\n- 4 : Quatre\n- 5 : Cinq\n- 6 : Six\n- 7 : Sept\n- 8 : Huit\n- 9 : Neuf\n- 10 : Dix",
+          "lockedInitially": false,
+          "order": 1
+        },
+        {
+          "title": "Exercices pratiques",
+          "content": "## Compter les objets\n\nMaintenant, pratiquons le comptage avec des objets.\n\nRegardez autour de vous et comptez:\n- Combien de doigts avez-vous?\n- Combien de chaises dans la classe?\n- Combien de livres sur la table?",
+          "lockedInitially": false,
+          "order": 2
+        }
+      ],
+      "exercises": [
+        {
+          "id": "ex1",
+          "type": "mcq",
+          "question": "Combien font 3 + 2?",
+          "options": ["4", "5", "6", "7"],
+          "correctAnswer": "1",
+          "explanation": "3 + 2 = 5. Nous ajoutons trois à deux pour obtenir cinq."
+        },
+        {
+          "id": "ex2",
+          "type": "true_false",
+          "question": "Le nombre 7 vient après le nombre 6.",
+          "correctAnswer": "true",
+          "explanation": "C'est vrai! Dans l'ordre des nombres, 7 vient directement après 6."
+        },
+        {
+          "id": "ex3",
+          "type": "mcq",
+          "question": "Quel est le nombre qui vient avant 10?",
+          "options": ["8", "9", "11", "7"],
+          "correctAnswer": "1",
+          "explanation": "Le nombre 9 vient juste avant 10."
+        }
+      ]
+    },
+    {
+      "id": "content_arabic_lesson1",
+      "lessonId": "arabic_lesson1",
+      "sections": [
+        {
+          "title": "الحروف الأولى",
+          "content": "# الحروف العربية الأولى\n\nسنتعلم اليوم ثلاثة حروف من الأبجدية العربية.\n\n## الحرف الأول: أ (ألف)\n\nألف هو الحرف الأول في الأبجدية العربية.\n\nأمثلة: أسد، أرنب، أب\n\n## الحرف الثاني: ب (باء)\n\nباء هو الحرف الثاني.\n\nأمثلة: بيت، بطة، باب\n\n## الحرف الثالث: ت (تاء)\n\nتاء هو الحرف الثالث.\n\nأمثلة: تفاحة، تمر، تلميذ",
+          "lockedInitially": false,
+          "order": 1
+        }
+      ],
+      "exercises": [
+        {
+          "id": "ex1",
+          "type": "mcq",
+          "question": "ما هو الحرف الأول في كلمة 'أسد'؟",
+          "options": ["ب", "أ", "ت", "س"],
+          "correctAnswer": "1",
+          "explanation": "الحرف الأول في كلمة أسد هو 'أ' (ألف)."
+        },
+        {
+          "id": "ex2",
+          "type": "true_false",
+          "question": "حرف الباء يأتي بعد حرف الألف.",
+          "correctAnswer": "true",
+          "explanation": "صحيح! الباء هو الحرف الثاني بعد الألف."
+        }
+      ]
+    }
+  ],
+  "ad_slots": [
+    {
+      "id": "ad_home_top_1",
+      "slotName": "home_top",
+      "imageUrl": "https://via.placeholder.com/800x200/2196F3/FFFFFF?text=Education+Ad+1",
+      "targetUrl": "https://www.example.com/ad1",
+      "enabled": true,
+      "startDate": null,
+      "endDate": null,
+      "order": 1
+    },
+    {
+      "id": "ad_home_bottom_1",
+      "slotName": "home_bottom",
+      "imageUrl": "https://via.placeholder.com/800x200/4CAF50/FFFFFF?text=Learning+Platform",
+      "targetUrl": "https://www.example.com/ad2",
+      "enabled": true,
+      "startDate": null,
+      "endDate": null,
+      "order": 1
+    },
+    {
+      "id": "ad_lesson_top_1",
+      "slotName": "lesson_top",
+      "imageUrl": "https://via.placeholder.com/800x200/FF9800/FFFFFF?text=Study+Materials",
+      "targetUrl": "https://www.example.com/ad3",
+      "enabled": true,
+      "startDate": null,
+      "endDate": null,
+      "order": 1
+    },
+    {
+      "id": "ad_lesson_bottom_1",
+      "slotName": "lesson_bottom",
+      "imageUrl": "https://via.placeholder.com/800x200/9C27B0/FFFFFF?text=Extra+Courses",
+      "targetUrl": "https://www.example.com/ad4",
+      "enabled": true,
+      "startDate": null,
+      "endDate": null,
+      "order": 1
+    }
+  ]
+}

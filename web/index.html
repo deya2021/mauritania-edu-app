@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Mauritania Educational App - Learn in Arabic and French">
+  
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Mauritania Edu">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  
+  <title>Mauritania Edu - Demo</title>
+  <link rel="manifest" href="manifest.json">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    #loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .loader {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #2196F3;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .loading-text {
+      margin-top: 20px;
+      color: #2196F3;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    
+    /* Mobile-first responsive design */
+    @media (min-width: 481px) {
+      body {
+        max-width: 480px;
+        margin: 0 auto;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">
+    <div class="loader"></div>
+    <div class="loading-text">Loading Mauritania Edu...</div>
+  </div>
+  
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+  <script src="flutter.js" defer></script>
+</body>
+</html>

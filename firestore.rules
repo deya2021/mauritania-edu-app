@@ -1,0 +1,67 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    // Users collection
+    match /users/{userId} {
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId);
+      allow update: if isOwner(userId);
+      allow delete: if false; // Users cannot delete their own account
+    }
+    
+    // Years collection (read-only for authenticated users)
+    match /years/{yearId} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Only admins can write (via backend)
+    }
+    
+    // Subjects collection (read-only for authenticated users)
+    match /subjects/{subjectId} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Only admins can write
+    }
+    
+    // Units collection (read-only for authenticated users)
+    match /units/{unitId} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Only admins can write
+    }
+    
+    // Lessons collection (read-only for authenticated users)
+    match /lessons/{lessonId} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Only admins can write
+    }
+    
+    // Lesson contents collection (read-only for authenticated users)
+    match /lesson_contents/{contentId} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Only admins can write
+    }
+    
+    // User progress collection
+    match /user_progress/{progressId} {
+      // progressId format: {userId}_{subjectId}
+      allow read: if isAuthenticated() && 
+                     progressId.matches(request.auth.uid + '_.*');
+      allow write: if isAuthenticated() && 
+                      progressId.matches(request.auth.uid + '_.*');
+    }
+    
+    // Ad slots collection (read-only for authenticated users)
+    match /ad_slots/{adId} {
+      allow read: if isAuthenticated();
+      allow write: if false; // Only admins can write
+    }
+  }
+}

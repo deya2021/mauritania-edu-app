@@ -1,0 +1,78 @@
+name: mauritania_edu_app
+description: Educational mobile application for students in Mauritania
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  
+  # Firebase
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.15.3
+  cloud_firestore: ^4.13.6
+  firebase_messaging: ^14.7.9
+  firebase_analytics: ^10.8.0
+  firebase_crashlytics: ^3.4.9
+  
+  # State Management
+  provider: ^6.1.1
+  
+  # UI
+  cupertino_icons: ^1.0.6
+  flutter_svg: ^2.0.9
+  cached_network_image: ^3.3.0
+  
+  # Utilities
+  intl: ^0.18.1
+  shared_preferences: ^2.2.2
+  webview_flutter: ^4.4.2
+  pin_code_fields: ^8.0.1
+  
+  # Markdown rendering
+  flutter_markdown: ^0.6.18
+  
+  # Local Storage
+  sqflite: ^2.3.0
+  path_provider: ^2.1.1
+  path: ^1.8.3
+  
+  # Fonts
+  google_fonts: ^6.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21
+  web:
+    generate: true
+    image_path: "assets/images/app_icon.png"
+    background_color: "#2196F3"
+    theme_color: "#2196F3"
+  windows:
+    generate: true
+    image_path: "assets/images/app_icon.png"
+    icon_size: 48
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/data/seed_data.json
+  
+  # Fonts - Using Google Fonts package instead of local files
+  # This automatically downloads and caches fonts
