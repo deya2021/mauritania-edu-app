@@ -2,20 +2,20 @@
   "years": [
     {
       "id": "year_1",
-      "name": {
-        "ar": "السنة الأولى",
-        "fr": "Première année"
-      },
+      "name": {"ar": "السنة الأولى", "fr": "Première année"},
       "order": 1,
       "isActive": true
     },
     {
       "id": "year_2",
-      "name": {
-        "ar": "السنة الثانية",
-        "fr": "Deuxième année"
-      },
+      "name": {"ar": "السنة الثانية", "fr": "Deuxième année"},
       "order": 2,
+      "isActive": true
+    },
+    {
+      "id": "year_3",
+      "name": {"ar": "السنة الثالثة", "fr": "Troisième année"},
+      "order": 3,
       "isActive": true
     }
   ],
@@ -23,44 +23,50 @@
     {
       "id": "math_year1",
       "yearId": "year_1",
-      "name": {
-        "ar": "الرياضيات",
-        "fr": "Mathématiques"
-      },
-      "iconUrl": "https://example.com/icons/math.png",
+      "name": {"ar": "الرياضيات", "fr": "Mathématiques"},
+      "iconUrl": "",
       "color": "#2196F3",
       "order": 1
     },
     {
       "id": "arabic_year1",
       "yearId": "year_1",
-      "name": {
-        "ar": "اللغة العربية",
-        "fr": "Langue Arabe"
-      },
-      "iconUrl": "https://example.com/icons/arabic.png",
+      "name": {"ar": "اللغة العربية", "fr": "Langue Arabe"},
+      "iconUrl": "",
       "color": "#4CAF50",
       "order": 2
-    }
-  ],
-  "units": [
+    },
     {
-      "id": "math_unit1",
-      "subjectId": "math_year1",
-      "name": {
-        "ar": "الأعداد",
-        "fr": "Les nombres"
-      },
+      "id": "french_year1",
+      "yearId": "year_1",
+      "name": {"ar": "اللغة الفرنسية", "fr": "Langue Française"},
+      "iconUrl": "",
+      "color": "#9C27B0",
+      "order": 3
+    },
+    {
+      "id": "science_year1",
+      "yearId": "year_1",
+      "name": {"ar": "العلوم", "fr": "Sciences"},
+      "iconUrl": "",
+      "color": "#FF9800",
+      "order": 4
+    },
+    {
+      "id": "math_year2",
+      "yearId": "year_2",
+      "name": {"ar": "الرياضيات", "fr": "Mathématiques"},
+      "iconUrl": "",
+      "color": "#2196F3",
       "order": 1
     },
     {
-      "id": "arabic_unit1",
-      "subjectId": "arabic_year1",
-      "name": {
-        "ar": "الحروف الهجائية",
-        "fr": "L'alphabet"
-      },
-      "order": 1
+      "id": "arabic_year2",
+      "yearId": "year_2",
+      "name": {"ar": "اللغة العربية", "fr": "Langue Arabe"},
+      "iconUrl": "",
+      "color": "#4CAF50",
+      "order": 2
     }
   ],
   "lessons": [
@@ -68,13 +74,10 @@
       "id": "math_lesson1",
       "unitId": "math_unit1",
       "subjectId": "math_year1",
-      "title": {
-        "ar": "الأعداد من 1 إلى 10",
-        "fr": "Les nombres de 1 à 10"
-      },
+      "title": {"ar": "الأعداد من 1 إلى 10", "fr": "Les nombres de 1 à 10"},
       "summary": {
-        "ar": "في هذا الدرس سنتعلم الأعداد من 1 إلى 10 وكيفية كتابتها والعد باستخدامها.",
-        "fr": "Dans cette leçon, nous apprendrons les nombres de 1 à 10 et comment les écrire et compter avec eux."
+        "ar": "في هذا الدرس سنتعلم الأعداد من 1 إلى 10 وكيفية قراءتها وكتابتها.",
+        "fr": "Dans cette leçon, nous allons apprendre les nombres de 1 à 10, comment les lire et les écrire."
       },
       "contentLanguage": "fr",
       "order": 1
@@ -83,31 +86,121 @@
       "id": "math_lesson2",
       "unitId": "math_unit1",
       "subjectId": "math_year1",
-      "title": {
-        "ar": "الجمع البسيط",
-        "fr": "Addition simple"
-      },
+      "title": {"ar": "الجمع البسيط", "fr": "L'addition simple"},
       "summary": {
-        "ar": "سنتعلم كيفية جمع الأعداد الصغيرة معاً.",
-        "fr": "Nous apprendrons comment additionner de petits nombres ensemble."
+        "ar": "سنتعلم كيفية جمع الأعداد الصغيرة معاً باستخدام أمثلة عملية.",
+        "fr": "Nous apprendrons comment additionner de petits nombres ensemble avec des exemples pratiques."
       },
       "contentLanguage": "fr",
       "order": 2
     },
     {
+      "id": "math_lesson3",
+      "unitId": "math_unit1",
+      "subjectId": "math_year1",
+      "title": {"ar": "الطرح البسيط", "fr": "La soustraction simple"},
+      "summary": {
+        "ar": "سنتعلم عملية الطرح وكيفية إيجاد الفرق بين عددين.",
+        "fr": "Nous allons apprendre la soustraction et comment trouver la différence entre deux nombres."
+      },
+      "contentLanguage": "fr",
+      "order": 3
+    },
+    {
+      "id": "math_lesson4",
+      "unitId": "math_unit2",
+      "subjectId": "math_year1",
+      "title": {"ar": "الأشكال الهندسية", "fr": "Les formes géométriques"},
+      "summary": {
+        "ar": "تعرف على الأشكال الهندسية الأساسية: المربع، المثلث، الدائرة.",
+        "fr": "Découvrez les formes géométriques de base: le carré, le triangle, le cercle."
+      },
+      "contentLanguage": "fr",
+      "order": 4
+    },
+    {
       "id": "arabic_lesson1",
       "unitId": "arabic_unit1",
       "subjectId": "arabic_year1",
-      "title": {
-        "ar": "الحروف من أ إلى ج",
-        "fr": "Les lettres de Alif à Jim"
-      },
+      "title": {"ar": "حروف المد: الألف والواو والياء", "fr": "Les lettres de prolongation"},
       "summary": {
-        "ar": "سنتعلم الحروف الثلاثة الأولى من الأبجدية العربية: أ، ب، ج",
-        "fr": "Nous apprendrons les trois premières lettres de l'alphabet arabe: Alif, Ba, Jim"
+        "ar": "سنتعلم حروف المد الثلاثة وكيفية نطقها في الكلمات.",
+        "fr": "Nous apprendrons les trois lettres de prolongation et comment les prononcer dans les mots."
       },
       "contentLanguage": "ar",
       "order": 1
+    },
+    {
+      "id": "arabic_lesson2",
+      "unitId": "arabic_unit1",
+      "subjectId": "arabic_year1",
+      "title": {"ar": "الحركات: الفتحة والضمة والكسرة", "fr": "Les voyelles courtes"},
+      "summary": {
+        "ar": "تعلم الحركات القصيرة في اللغة العربية وكيفية استخدامها.",
+        "fr": "Apprenez les voyelles courtes en arabe et comment les utiliser."
+      },
+      "contentLanguage": "ar",
+      "order": 2
+    },
+    {
+      "id": "arabic_lesson3",
+      "unitId": "arabic_unit2",
+      "subjectId": "arabic_year1",
+      "title": {"ar": "الجملة الاسمية", "fr": "La phrase nominale"},
+      "summary": {
+        "ar": "نتعرف على الجملة الاسمية وعناصرها: المبتدأ والخبر.",
+        "fr": "Découvrons la phrase nominale arabe et ses éléments: le sujet et le prédicat."
+      },
+      "contentLanguage": "ar",
+      "order": 3
+    },
+    {
+      "id": "french_lesson1",
+      "unitId": "french_unit1",
+      "subjectId": "french_year1",
+      "title": {"ar": "التحية والمعرفة", "fr": "Les salutations"},
+      "summary": {
+        "ar": "كيفية التحية والتعريف بالنفس باللغة الفرنسية.",
+        "fr": "Comment saluer et se présenter en français."
+      },
+      "contentLanguage": "fr",
+      "order": 1
+    },
+    {
+      "id": "french_lesson2",
+      "unitId": "french_unit1",
+      "subjectId": "french_year1",
+      "title": {"ar": "الأرقام بالفرنسية", "fr": "Les chiffres en français"},
+      "summary": {
+        "ar": "تعلم الأرقام من 1 إلى 20 باللغة الفرنسية.",
+        "fr": "Apprenez les chiffres de 1 à 20 en français."
+      },
+      "contentLanguage": "fr",
+      "order": 2
+    },
+    {
+      "id": "science_lesson1",
+      "unitId": "science_unit1",
+      "subjectId": "science_year1",
+      "title": {"ar": "الحيوانات الأليفة", "fr": "Les animaux domestiques"},
+      "summary": {
+        "ar": "نتعرف على الحيوانات الأليفة وخصائصها.",
+        "fr": "Nous allons découvrir les animaux domestiques et leurs caractéristiques."
+      },
+      "contentLanguage": "ar",
+      "order": 1
+    },
+    {
+      "id": "science_lesson2",
+      "unitId": "science_unit1",
+      "subjectId": "science_year1",
+      "title": {"ar": "النباتات وأجزاؤها", "fr": "Les plantes et leurs parties"},
+      "summary": {
+        "ar": "دراسة أجزاء النبات: الجذر والساق والأوراق والزهرة.",
+        "fr": "Étude des parties d'une plante: la racine, la tige, les feuilles et la fleur."
+      },
+      "contentLanguage": "ar",
+      "order": 2
     }
   ],
   "lesson_contents": [
@@ -116,14 +209,14 @@
       "lessonId": "math_lesson1",
       "sections": [
         {
-          "title": "Introduction aux nombres",
-          "content": "# Les nombres de 1 à 10\n\nLes nombres sont partout autour de nous. Apprenons les premiers nombres de 1 à 10.\n\n## Les nombres\n\n- 1 : Un\n- 2 : Deux\n- 3 : Trois\n- 4 : Quatre\n- 5 : Cinq\n- 6 : Six\n- 7 : Sept\n- 8 : Huit\n- 9 : Neuf\n- 10 : Dix",
+          "title": "Les nombres de 1 à 10",
+          "content": "# Les nombres de 1 à 10 🔢\n\n## Compter avec les doigts\n\nNous pouvons compter jusqu'à 10 avec nos doigts!\n\n| Nombre | Mot | Symbole |\n|--------|-----|--------|\n| 1 | un | ١ |\n| 2 | deux | ٢ |\n| 3 | trois | ٣ |\n| 4 | quatre | ٤ |\n| 5 | cinq | ٥ |\n| 6 | six | ٦ |\n| 7 | sept | ٧ |\n| 8 | huit | ٨ |\n| 9 | neuf | ٩ |\n| 10 | dix | ١٠ |\n\n## Comment compter?\n\nRépétez après moi: **1, 2, 3, 4, 5, 6, 7, 8, 9, 10!**\n\n> 💡 Astuce: Utilisez vos doigts pour compter!",
           "lockedInitially": false,
           "order": 1
         },
         {
-          "title": "Exercices pratiques",
-          "content": "## Compter les objets\n\nMaintenant, pratiquons le comptage avec des objets.\n\nRegardez autour de vous et comptez:\n- Combien de doigts avez-vous?\n- Combien de chaises dans la classe?\n- Combien de livres sur la table?",
+          "title": "Exercices de comptage",
+          "content": "## Pratique 🎯\n\nComptez les objets suivants:\n\n🍎🍎🍎 = **3** pommes\n\n⭐⭐⭐⭐⭐ = **5** étoiles\n\n🏠🏠🏠🏠🏠🏠🏠 = **7** maisons",
           "lockedInitially": false,
           "order": 2
         }
@@ -135,32 +228,82 @@
           "question": "Combien font 3 + 2?",
           "options": ["4", "5", "6", "7"],
           "correctAnswer": "1",
-          "explanation": "3 + 2 = 5. Nous ajoutons trois à deux pour obtenir cinq."
+          "explanation": "3 + 2 = 5. Comptez: 3, puis ajoutez 2: 4, 5!"
         },
         {
           "id": "ex2",
           "type": "true_false",
-          "question": "Le nombre 7 vient après le nombre 6.",
+          "question": "Le nombre 7 est plus grand que 5.",
           "correctAnswer": "true",
-          "explanation": "C'est vrai! Dans l'ordre des nombres, 7 vient directement après 6."
+          "explanation": "Oui! 7 > 5. Dans l'ordre: 5, 6, 7..."
         },
         {
           "id": "ex3",
           "type": "mcq",
-          "question": "Quel est le nombre qui vient avant 10?",
-          "options": ["8", "9", "11", "7"],
+          "question": "Quel nombre vient après 8?",
+          "options": ["7", "9", "10", "6"],
           "correctAnswer": "1",
-          "explanation": "Le nombre 9 vient juste avant 10."
+          "explanation": "Après 8 vient 9! La séquence est: ..., 7, 8, 9, 10"
+        },
+        {
+          "id": "ex4",
+          "type": "true_false",
+          "question": "2 + 3 = 6",
+          "correctAnswer": "false",
+          "explanation": "Non! 2 + 3 = 5, pas 6."
         }
       ]
     },
     {
-      "id": "content_arabic_lesson1",
-      "lessonId": "arabic_lesson1",
+      "id": "content_math_lesson2",
+      "lessonId": "math_lesson2",
       "sections": [
         {
-          "title": "الحروف الأولى",
-          "content": "# الحروف العربية الأولى\n\nسنتعلم اليوم ثلاثة حروف من الأبجدية العربية.\n\n## الحرف الأول: أ (ألف)\n\nألف هو الحرف الأول في الأبجدية العربية.\n\nأمثلة: أسد، أرنب، أب\n\n## الحرف الثاني: ب (باء)\n\nباء هو الحرف الثاني.\n\nأمثلة: بيت، بطة، باب\n\n## الحرف الثالث: ت (تاء)\n\nتاء هو الحرف الثالث.\n\nأمثلة: تفاحة، تمر، تلميذ",
+          "title": "L'addition simple",
+          "content": "# L'addition ➕\n\n## Qu'est-ce que l'addition?\n\nL'addition c'est **regrouper** des choses ensemble!\n\n## Exemples\n\n🍎 + 🍎 = 🍎🍎 → **1 + 1 = 2**\n\n🐱🐱 + 🐱 = 🐱🐱🐱 → **2 + 1 = 3**\n\n## Tables d'addition (1-5)\n\n```\n1 + 1 = 2\n1 + 2 = 3\n2 + 2 = 4\n2 + 3 = 5\n3 + 3 = 6\n4 + 4 = 8\n5 + 5 = 10\n```\n\n> 💡 Mémorisez ces additions, elles sont très utiles!",
+          "lockedInitially": false,
+          "order": 1
+        },
+        {
+          "title": "Problèmes pratiques",
+          "content": "## Résolvons des problèmes! 🧩\n\n**Problème 1:** Marie a 3 bonbons. Jean lui donne 2 bonbons. Combien en a-t-elle maintenant?\n\n> **Réponse:** 3 + 2 = **5 bonbons** 🍬🍬🍬🍬🍬\n\n**Problème 2:** Il y a 4 oiseaux dans un arbre. 3 autres arrivent. Combien y a-t-il d'oiseaux?\n\n> **Réponse:** 4 + 3 = **7 oiseaux** 🐦🐦🐦🐦🐦🐦🐦",
+          "lockedInitially": false,
+          "order": 2
+        }
+      ],
+      "exercises": [
+        {
+          "id": "ex1",
+          "type": "mcq",
+          "question": "Combien font 4 + 3?",
+          "options": ["6", "7", "8", "5"],
+          "correctAnswer": "1",
+          "explanation": "4 + 3 = 7. Comptez à partir de 4: 5, 6, 7!"
+        },
+        {
+          "id": "ex2",
+          "type": "true_false",
+          "question": "5 + 5 = 10",
+          "correctAnswer": "true",
+          "explanation": "Oui! 5 + 5 = 10. Cinq plus cinq égale dix!"
+        },
+        {
+          "id": "ex3",
+          "type": "mcq",
+          "question": "Ahmed a 2 stylos. Son ami lui donne 4 stylos. Combien Ahmed a-t-il de stylos?",
+          "options": ["5", "6", "7", "8"],
+          "correctAnswer": "1",
+          "explanation": "2 + 4 = 6 stylos. Ahmed a maintenant 6 stylos!"
+        }
+      ]
+    },
+    {
+      "id": "content_math_lesson3",
+      "lessonId": "math_lesson3",
+      "sections": [
+        {
+          "title": "La soustraction",
+          "content": "# La soustraction ➖\n\n## Qu'est-ce que la soustraction?\n\nLa soustraction c'est **enlever** des choses d'un groupe!\n\n## Exemples\n\n🍎🍎🍎 - 🍎 = 🍎🍎 → **3 - 1 = 2**\n\n🐱🐱🐱🐱🐱 - 🐱🐱 = 🐱🐱🐱 → **5 - 2 = 3**\n\n## Règles importantes\n\n1. On ne peut pas soustraire un grand nombre d'un petit nombre (pour l'instant!)\n2. X - 0 = X (soustraire zéro ne change rien)\n3. X - X = 0 (soustraire un nombre de lui-même donne zéro)\n\n> 💡 Pensez à la soustraction comme «donner» des objets!",
           "lockedInitially": false,
           "order": 1
         }
@@ -169,60 +312,219 @@
         {
           "id": "ex1",
           "type": "mcq",
-          "question": "ما هو الحرف الأول في كلمة 'أسد'؟",
-          "options": ["ب", "أ", "ت", "س"],
+          "question": "Combien font 8 - 3?",
+          "options": ["4", "5", "6", "3"],
           "correctAnswer": "1",
-          "explanation": "الحرف الأول في كلمة أسد هو 'أ' (ألف)."
+          "explanation": "8 - 3 = 5. Partez de 8 et comptez en arrière 3 fois: 7, 6, 5!"
         },
         {
           "id": "ex2",
           "type": "true_false",
-          "question": "حرف الباء يأتي بعد حرف الألف.",
+          "question": "10 - 10 = 1",
+          "correctAnswer": "false",
+          "explanation": "Non! 10 - 10 = 0. Quand on soustrait un nombre de lui-même, on obtient zéro."
+        },
+        {
+          "id": "ex3",
+          "type": "mcq",
+          "question": "Il y avait 7 élèves dans la classe. 2 sont partis. Combien reste-t-il d'élèves?",
+          "options": ["4", "5", "6", "3"],
+          "correctAnswer": "1",
+          "explanation": "7 - 2 = 5. Il reste 5 élèves dans la classe."
+        }
+      ]
+    },
+    {
+      "id": "content_arabic_lesson1",
+      "lessonId": "arabic_lesson1",
+      "sections": [
+        {
+          "title": "حروف المد",
+          "content": "# حروف المد في اللغة العربية 🔤\n\n## ما هي حروف المد؟\n\nحروف المد هي الحروف التي تُمد الصوت، وهي ثلاثة:\n\n| الحرف | الاسم | الصوت |\n|-------|-------|-------|\n| **ا** | الألف | آ (طويل) |\n| **و** | الواو | أو (طويل) |\n| **ي** | الياء | إي (طويل) |\n\n## أمثلة\n\n- **كِتَاب** - الألف في (تَا) تمد الصوت\n- **نُور** - الواو في (نُو) تمد الصوت  \n- **بَيْت** - الياء في (بَيْ) تمد الصوت\n\n> 💡 انتبه: حروف المد تُطيل الصوت في نطق الكلمة!",
+          "lockedInitially": false,
+          "order": 1
+        },
+        {
+          "title": "تطبيق على كلمات",
+          "content": "## تعرف على كلمات بها حروف مد 📚\n\n### مع الألف:\n- **بَاب** - باب البيت 🚪\n- **نَار** - النار حارة 🔥\n- **قَام** - قام من نومه\n\n### مع الواو:\n- **نُور** - نور الشمس ☀️\n- **فُول** - حبوب الفول\n- **دُود** - دودة الأرض 🪱\n\n### مع الياء:\n- **بَيْت** - البيت الكبير 🏠\n- **لَيْل** - الليل والنهار 🌙\n- **عَيْن** - عين الإنسان 👁️",
+          "lockedInitially": false,
+          "order": 2
+        }
+      ],
+      "exercises": [
+        {
+          "id": "ex1",
+          "type": "mcq",
+          "question": "ما هو حرف المد في كلمة 'كِتَاب'؟",
+          "options": ["الكاف", "الألف", "الباء", "التاء"],
+          "correctAnswer": "1",
+          "explanation": "الألف في كلمة 'كِتَاب' هو حرف المد الذي يُطيل صوت 'آ'."
+        },
+        {
+          "id": "ex2",
+          "type": "true_false",
+          "question": "كلمة 'نُور' تحتوي على حرف المد الواو",
           "correctAnswer": "true",
-          "explanation": "صحيح! الباء هو الحرف الثاني بعد الألف."
+          "explanation": "صحيح! الواو في كلمة 'نُور' تمد صوت 'أو'."
+        },
+        {
+          "id": "ex3",
+          "type": "mcq",
+          "question": "كم عدد حروف المد في اللغة العربية؟",
+          "options": ["2", "3", "4", "5"],
+          "correctAnswer": "1",
+          "explanation": "حروف المد ثلاثة: الألف والواو والياء."
+        }
+      ]
+    },
+    {
+      "id": "content_arabic_lesson2",
+      "lessonId": "arabic_lesson2",
+      "sections": [
+        {
+          "title": "الحركات القصيرة",
+          "content": "# الحركات في اللغة العربية ✨\n\n## أنواع الحركات\n\n### 1. الفتحة (َ)\nعلامة صغيرة فوق الحرف، تُنطق **'أ'** قصيرة\n\n**أمثلة:** كَتَبَ، قَرَأَ، ذَهَبَ\n\n### 2. الضمة (ُ)\nعلامة صغيرة فوق الحرف تشبه الواو، تُنطق **'أو'** قصيرة\n\n**أمثلة:** كُتُب، رُسُل، مُعَلِّم\n\n### 3. الكسرة (ِ)\nعلامة صغيرة تحت الحرف، تُنطق **'إي'** قصيرة\n\n**أمثلة:** بِسْم، رِجَال، كِتَاب\n\n> 📌 ملاحظة: بدون حركات، يصعب قراءة الكلمات صحيحة!",
+          "lockedInitially": false,
+          "order": 1
+        }
+      ],
+      "exercises": [
+        {
+          "id": "ex1",
+          "type": "mcq",
+          "question": "الحركة التي تُوضع فوق الحرف وتُنطق 'أ' هي:",
+          "options": ["الضمة", "الفتحة", "الكسرة", "السكون"],
+          "correctAnswer": "1",
+          "explanation": "الفتحة هي الحركة الصغيرة التي توضع فوق الحرف وتُنطق 'أ' قصيرة."
+        },
+        {
+          "id": "ex2",
+          "type": "true_false",
+          "question": "الكسرة تُوضع تحت الحرف",
+          "correctAnswer": "true",
+          "explanation": "صحيح! الكسرة علامة صغيرة توضع أسفل الحرف وتُنطق 'إي' قصيرة."
+        },
+        {
+          "id": "ex3",
+          "type": "mcq",
+          "question": "كم عدد الحركات الرئيسية في اللغة العربية؟",
+          "options": ["2", "3", "4", "5"],
+          "correctAnswer": "1",
+          "explanation": "الحركات الرئيسية ثلاث: الفتحة والضمة والكسرة."
+        }
+      ]
+    },
+    {
+      "id": "content_french_lesson1",
+      "lessonId": "french_lesson1",
+      "sections": [
+        {
+          "title": "Les salutations",
+          "content": "# Bonjour! Comment tu t'appelles? 👋\n\n## Les salutations\n\n| Moment | Formule | Signification |\n|--------|---------|---------------|\n| Matin | **Bonjour!** | Good morning! |\n| Après-midi | **Bonsoir!** | Good evening! |\n| Départ | **Au revoir!** | Goodbye! |\n| Nuit | **Bonne nuit!** | Good night! |\n\n## Se présenter\n\n**- Comment tu t'appelles?**  _(Quel est ton nom?)_\n\n**- Je m'appelle Ahmed.** _(Je m'appelle...)_\n\n**- Quel âge as-tu?**  _(Combien d'années as-tu?)_\n\n**- J'ai 8 ans.** _(J'ai ... ans)_\n\n**- D'où viens-tu?**  _(De quel pays?)_\n\n**- Je viens de Mauritanie.** 🇲🇷",
+          "lockedInitially": false,
+          "order": 1
+        }
+      ],
+      "exercises": [
+        {
+          "id": "ex1",
+          "type": "mcq",
+          "question": "Comment dit-on 'Good morning' en français?",
+          "options": ["Bonsoir", "Bonjour", "Au revoir", "Merci"],
+          "correctAnswer": "1",
+          "explanation": "En français, 'Good morning' se dit 'Bonjour'! On l'utilise le matin."
+        },
+        {
+          "id": "ex2",
+          "type": "true_false",
+          "question": "'Au revoir' signifie 'Hello' en anglais.",
+          "correctAnswer": "false",
+          "explanation": "Non! 'Au revoir' signifie 'Goodbye' en anglais. Pour dire 'Hello', on dit 'Bonjour' ou 'Salut'."
+        },
+        {
+          "id": "ex3",
+          "type": "mcq",
+          "question": "Comment se présente-t-on en français?",
+          "options": [
+            "Je suis Ahmed",
+            "Je m'appelle Ahmed",
+            "Mon nom Ahmed",
+            "Moi Ahmed"
+          ],
+          "correctAnswer": "1",
+          "explanation": "Pour se présenter correctement en français, on dit: 'Je m'appelle [nom]'."
+        }
+      ]
+    },
+    {
+      "id": "content_science_lesson1",
+      "lessonId": "science_lesson1",
+      "sections": [
+        {
+          "title": "الحيوانات الأليفة",
+          "content": "# الحيوانات الأليفة 🐾\n\n## ما هي الحيوانات الأليفة؟\n\nالحيوانات الأليفة هي الحيوانات التي **تعيش مع الإنسان في المنزل** وتكون صديقة له.\n\n## أشهر الحيوانات الأليفة\n\n### 🐕 الكلب\n- وفي ومخلص لصاحبه\n- يساعد في الحراسة\n- يحتاج إلى رعاية يومية\n\n### 🐈 القطة\n- مستقلة وهادئة\n- تصطاد الفئران\n- تحب النظافة\n\n### 🐠 السمكة\n- تعيش في حوض الماء\n- هادئة ولا تحتاج مساحة كبيرة\n- تُزين المنزل\n\n### 🐦 الطائر\n- يُغرد ويُبهج المنزل\n- يحتاج قفصاً نظيفاً\n- بعض الطيور تتعلم الكلام!\n\n## كيف نعتني بالحيوانات الأليفة؟\n\n1. 🥗 **الغذاء:** إطعامها بانتظام\n2. 💧 **الماء:** تأمين الماء النظيف دائماً\n3. 🏥 **الصحة:** زيارة الطبيح البيطري\n4. 🤗 **الحب:** إعطاؤها الاهتمام والحنان",
+          "lockedInitially": false,
+          "order": 1
+        }
+      ],
+      "exercises": [
+        {
+          "id": "ex1",
+          "type": "mcq",
+          "question": "من الحيوانات الأليفة التي تساعد في الحراسة؟",
+          "options": ["القطة", "الكلب", "السمكة", "الطائر"],
+          "correctAnswer": "1",
+          "explanation": "الكلب من أكثر الحيوانات الأليفة وفاءً وهو يساعد في حراسة المنزل."
+        },
+        {
+          "id": "ex2",
+          "type": "true_false",
+          "question": "السمكة تعيش في حوض الماء في المنزل",
+          "correctAnswer": "true",
+          "explanation": "صحيح! السمكة تحتاج إلى حوض ماء خاص للعيش في المنزل."
+        },
+        {
+          "id": "ex3",
+          "type": "mcq",
+          "question": "كم مرة في الأسبوع يجب أن نطعم الحيوانات الأليفة؟",
+          "options": ["مرة واحدة", "مرة كل يومين", "يومياً بانتظام", "لا نحتاج إطعامها"],
+          "correctAnswer": "2",
+          "explanation": "يجب إطعام الحيوانات الأليفة بانتظام كل يوم حتى تبقى بصحة جيدة."
         }
       ]
     }
   ],
   "ad_slots": [
     {
-      "id": "ad_home_top_1",
+      "id": "ad_home_top",
       "slotName": "home_top",
-      "imageUrl": "https://via.placeholder.com/800x200/2196F3/FFFFFF?text=Education+Ad+1",
-      "targetUrl": "https://www.example.com/ad1",
+      "imageUrl": "https://via.placeholder.com/800x200/1E3A8A/FFFFFF?text=التعليم+الموريتاني",
+      "targetUrl": "https://example.com",
       "enabled": true,
-      "startDate": null,
-      "endDate": null,
       "order": 1
     },
     {
-      "id": "ad_home_bottom_1",
+      "id": "ad_home_bottom",
       "slotName": "home_bottom",
-      "imageUrl": "https://via.placeholder.com/800x200/4CAF50/FFFFFF?text=Learning+Platform",
-      "targetUrl": "https://www.example.com/ad2",
+      "imageUrl": "https://via.placeholder.com/800x200/10B981/FFFFFF?text=انضم+إلينا+اليوم",
+      "targetUrl": "https://example.com",
       "enabled": true,
-      "startDate": null,
-      "endDate": null,
       "order": 1
     },
     {
-      "id": "ad_lesson_top_1",
+      "id": "ad_lesson_top",
       "slotName": "lesson_top",
-      "imageUrl": "https://via.placeholder.com/800x200/FF9800/FFFFFF?text=Study+Materials",
-      "targetUrl": "https://www.example.com/ad3",
+      "imageUrl": "https://via.placeholder.com/800x100/F59E0B/FFFFFF?text=تعلم+مع+أفضل+المعلمين",
+      "targetUrl": "https://example.com",
       "enabled": true,
-      "startDate": null,
-      "endDate": null,
       "order": 1
     },
     {
-      "id": "ad_lesson_bottom_1",
+      "id": "ad_lesson_bottom",
       "slotName": "lesson_bottom",
-      "imageUrl": "https://via.placeholder.com/800x200/9C27B0/FFFFFF?text=Extra+Courses",
-      "targetUrl": "https://www.example.com/ad4",
+      "imageUrl": "https://via.placeholder.com/800x100/7C3AED/FFFFFF?text=مستمر+في+التعلم؟+أحسنت!",
+      "targetUrl": "https://example.com",
       "enabled": true,
-      "startDate": null,
-      "endDate": null,
       "order": 1
     }
   ]
